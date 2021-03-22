@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-mp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "task-1": "nodemon --exec babel-node ./task-1/task1.1.js",
+    "task-2": "nodemon --exec babel-node ./task-1/task1.2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Metre-Ray/nodejs-mp.git"
+  },
+  "author": "Diana Loika",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Metre-Ray/nodejs-mp/issues"
+  },
+  "homepage": "https://github.com/Metre-Ray/nodejs-mp#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.12",
+    "@babel/preset-env": "^7.13.12",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "csvtojson": "^2.0.10"
+  }
+}
