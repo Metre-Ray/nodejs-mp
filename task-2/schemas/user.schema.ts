@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import passwordValidator from 'password-validator';
+import PasswordValidator from 'password-validator';
 
 const userCreateSchema = Joi.object().keys({
     login: Joi.string().required(),
@@ -9,7 +9,7 @@ const userCreateSchema = Joi.object().keys({
 
 const userUpdateSchema = userCreateSchema.fork(['login', 'password', 'age'], (field) => field.optional());
 
-const passwordSchema = new passwordValidator();
+const passwordSchema = new PasswordValidator();
 passwordSchema
     .has().digits(1)
     .has().letters(1)
