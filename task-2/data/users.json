@@ -1,0 +1,100 @@
+[
+    {
+      "id": "0",
+      "isDeleted": false,
+      "age": 17,
+      "login": "Calderon",
+      "password": "123"
+    },
+    {
+      "id": "1",
+      "isDeleted": false,
+      "age": 37,
+      "login": "Matthews",
+      "password": "123"
+    },
+    {
+      "id": "2",
+      "isDeleted": false,
+      "age": 27,
+      "login": "Vasquez",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "isDeleted": false,
+      "age": 15,
+      "login": "Celia",
+      "password": "123"
+    },
+    {
+      "id": "4",
+      "isDeleted": false,
+      "age": 31,
+      "login": "Ola",
+      "password": "123"
+    },
+    {
+      "id": "5",
+      "isDeleted": false,
+      "age": 21,
+      "login": "Chang",
+      "password": "123"
+    },
+    {
+      "id": "6",
+      "isDeleted": false,
+      "age": 21,
+      "login": "Rae",
+      "password": "123"
+    },
+    {
+      "id": "7",
+      "isDeleted": false,
+      "age": 24,
+      "login": "King",
+      "password": "123"
+    },
+    {
+      "id": "8",
+      "isDeleted": false,
+      "age": 27,
+      "login": "Macdonald",
+      "password": "123"
+    },
+    {
+      "id": "9",
+      "isDeleted": false,
+      "age": 40,
+      "login": "Gaines",
+      "password": "123"
+    },
+    {
+      "id": "10",
+      "isDeleted": false,
+      "age": 26,
+      "login": "Paige",
+      "password": "123"
+    },
+    {
+      "id": "11",
+      "isDeleted": false,
+      "age": 15,
+      "login": "Dawson",
+      "password": "123"
+    },
+    {
+      "id": "12",
+      "isDeleted": false,
+      "age": 16,
+      "login": "Wendy",
+      "password": "123"
+    },
+    {
+      "id": "13",
+      "isDeleted": false,
+      "age": 37,
+      "login": "Mandy",
+      "password": "123"
+    }
+]
