@@ -8,7 +8,8 @@
     "lint": "tslint --project ./tsconfig.json",
     "task-1-1": "nodemon --exec babel-node ./task-1/task1.1.js",
     "task-1-2": "nodemon --exec babel-node ./task-1/task1.2.js",
-    "start": "tsc && node dist/server.js"
+    "start": "tsc && node dist/server.js",
+    "start:dev": "nodemon --watch task-2/** -e ts --exec npm run start"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,10 @@
     "express": "^4.17.1",
     "joi": "^17.4.0",
     "password-validator": "^5.1.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
     "process": "^0.11.10",
+    "sequelize": "^6.6.2",
     "uuid": "^8.3.2"
   }
 }
