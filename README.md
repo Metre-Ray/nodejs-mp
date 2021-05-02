@@ -33,3 +33,8 @@ Link to the task: https://learn.epam.com/myLearning/program?groupGuid=4f43ace0-4
 All tasks have been completed
 
 Local postgres database was created on localhost:5432 (see `task2/database/dbConnectionStart.ts`)
+
+
+## Task 4
+
+In Progress...
