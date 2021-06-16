@@ -4,6 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 import { Op } from "sequelize";
 import { UserGroupModel } from "../models/user-group.model";
 import { IUsersToGroupMap } from "../models/user-group.interface";
+import * as jwt from 'jsonwebtoken';
+
+const SECRET = process.env.JWT_SECRET;
 
 export class UserService {
     public static async getUser(userFields: Partial<IUser>): Promise<UserModel | null> {
@@ -58,5 +61,15 @@ export class UserService {
             return null;
         }
         return users;
+    }
+
+    public static async login(username: string, password: string): Promise<string | null> {
+        const user = await UserService.getUser({ login: username });
+        if (!user || user.getDataValue('password') !== password) {
+            return null;
+        }
+        const payload = { id: user.getDataValue('id') };
+        const token = jwt.sign(payload, SECRET, { expiresIn: 3600 });
+        return token;
     }
 }
