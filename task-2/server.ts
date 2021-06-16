@@ -6,16 +6,22 @@ import { initDBData } from './database/dbDataInit';
 import { groupRouter } from './routers/group-route';
 import morgan from 'morgan';
 import { logger } from './loggers/loggers';
+import { authRouter } from './routers/auth-route';
+import { validators } from './validators/validators';
+import cors from 'cors';
 
 const PORT = process.env.PORT || 3456;
 
 const app = express();
 
 app.set('x-powered-by', false);
+app.use(cors())
 app.use(express.json());
 app.use(morgan('tiny', { stream: { write: message => logger.info(message) } }));
-app.use('/users', userRouter);
-app.use('/groups', groupRouter);
+
+app.use('/users', validators.checkToken, userRouter);
+app.use('/groups', validators.checkToken, groupRouter);
+app.use('/auth', authRouter);
 
 // Error handler 1: Express Error middleware
 app.use((err, req, res, next) => {

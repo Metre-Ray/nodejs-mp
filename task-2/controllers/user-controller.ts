@@ -56,4 +56,14 @@ const deleteUser = async (req: Request, res: Response) => {
     }
 }
 
-export { createUser, getUsers, getUserById, updateUser, deleteUser };
+const authenticateUser = async (req: Request, res: Response) => {
+    const { login, password } = req.body;
+    const token = await UserService.login(login, password);
+    if (!token) {
+        res.status(403).json({ message: 'Bad login/password combination' });
+        return;
+    }
+    res.send(token);
+}
+
+export { createUser, getUsers, getUserById, updateUser, deleteUser, authenticateUser };

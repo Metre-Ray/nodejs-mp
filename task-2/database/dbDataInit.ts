@@ -10,7 +10,7 @@ const initDBData = async () => {
     const user = await UserModel.findOne();
     if (!user) {
         UserModel.bulkCreate(USERS_).then(() => {
-            console.log('DB data initialized');
+            console.log('DB users data initialized');
         });
     }
     const group = await UserGroupModel.findOne();
