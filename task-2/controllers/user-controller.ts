@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
 const createUser = async (req: Request, res: Response) => {
     const user: IUser = req.body;
 
-    const oldUser = await UserService.getUser({ login: user.login});
+    const oldUser = await UserService.getUser({ login: user.login });
     if (oldUser) {
         res.status(409).json({ message: 'User with such login already exists' });
         return;
